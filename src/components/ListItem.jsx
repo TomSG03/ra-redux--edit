@@ -1,22 +1,28 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
-function ListItem(props) {
-  const storeItems = useSelector((store) => store.listReducer.items);
+function ListItem() {
+  const { items } = useSelector((store) => store.listReducer);
   const dispatch = useDispatch();
 
-  const handleRemove = (id) => {
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
-  };
+  function onDelete(item) {
+    dispatch({ type: 'REMOVE-ITEM', payload: item});
+    // dispatch({ type: 'CLEAR-FIELD', payload: ''});
+  }
 
-  return (
+  function onEdit(item) {
+    dispatch({ type: 'EDIT-ITEM', payload: item});
+  }
+
+  return (    
     <ul>
-      {storeItems &&
-        storeItems.map((o) => (
+      {items &&
+         items.map((o) => (
           <li key={o.id} style={{ marginTop: 10 }}>
-            <div style={{ display: 'inline-block', width: 200 }}>{o.name}</div>
-            <div style={{ display: 'inline-block', width: 100 }}>{o.price}</div>
-            <button onClick={() => handleRemove(o.id)}>✕</button>
+            <div className='list-item'>{o.name}</div>
+            <div className='list-item'>{o.price}</div>
+            <button onClick={() => onEdit(o)}>✎</button>
+            <button onClick={() => onDelete(o)}>✕</button>
           </li>
         ))}
     </ul>

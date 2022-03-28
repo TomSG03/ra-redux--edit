@@ -1,33 +1,44 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 function AddItem(props) {
-  const [item, setItem] = useState({ name: '', price: '' });
+  const storeItems = useSelector((store) => store.addSlice);
+  const dispatch = useDispatch();
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setItem({ ...item, [name]: value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    dispatch({ type: 'CHANGE-FIELD', payload: { name, value }});
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleAdd({ id: Math.random(), name: item.name, price: item.price });
-    console.log(item);
+    const {id, name, price } = storeItems;
+    if (storeItems.name !== '' && storeItems.price !== '') {
+      if (storeItems.id === '') {
+        dispatch({ type: 'ADD-ITEM', payload: { name, price }});
+        dispatch({ type: 'CLEAR-FIELD', payload: ''});
+      }
+      else {
+        dispatch({ type: 'UPDATE-ITEM', payload: {id, name, price }});
+        dispatch({ type: 'CLEAR-FIELD', payload: ''});
+
+      }
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className='input'
         name="name"
         onChange={handleChange}
-        value={item.name}
-        style={{ width: 200 }}
+        value={storeItems.name}
       />
       <input
+        className='input'
         name="price"
         onChange={handleChange}
-        value={item.price}
-        style={{ width: 200 }}
+        value={storeItems.price}
       />
       <button onClick={handleSubmit} type="primary">
         Save
@@ -35,7 +46,5 @@ function AddItem(props) {
     </form>
   );
 }
-
-AddItem.propTypes = {}
 
 export default AddItem
