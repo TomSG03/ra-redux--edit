@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ra-hooks-use_effect/static/css/main.ee31aeeb.css",
-    "main.js": "/ra-hooks-use_effect/static/js/main.95ffdcd1.js",
-    "static/js/787.04097c43.chunk.js": "/ra-hooks-use_effect/static/js/787.04097c43.chunk.js",
-    "index.html": "/ra-hooks-use_effect/index.html",
-    "main.ee31aeeb.css.map": "/ra-hooks-use_effect/static/css/main.ee31aeeb.css.map",
-    "main.95ffdcd1.js.map": "/ra-hooks-use_effect/static/js/main.95ffdcd1.js.map",
-    "787.04097c43.chunk.js.map": "/ra-hooks-use_effect/static/js/787.04097c43.chunk.js.map"
+    "main.css": "/ra-redux-edit/static/css/main.ee31aeeb.css",
+    "main.js": "/ra-redux-edit/static/js/main.28d380cb.js",
+    "static/js/787.04097c43.chunk.js": "/ra-redux-edit/static/js/787.04097c43.chunk.js",
+    "index.html": "/ra-redux-edit/index.html",
+    "main.ee31aeeb.css.map": "/ra-redux-edit/static/css/main.ee31aeeb.css.map",
+    "main.28d380cb.js.map": "/ra-redux-edit/static/js/main.28d380cb.js.map",
+    "787.04097c43.chunk.js.map": "/ra-redux-edit/static/js/787.04097c43.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee31aeeb.css",
-    "static/js/main.95ffdcd1.js"
+    "static/js/main.28d380cb.js"
   ]
 }
