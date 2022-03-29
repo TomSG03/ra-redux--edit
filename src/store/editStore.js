@@ -1,10 +1,12 @@
 import { createStore, combineReducers } from 'redux';
-import listReducer from '../reducers/listSlice';
-import addSlice from '../reducers/addSlice';
+import listReducer from '../reducers/listReducer';
+import addReducer from '../reducers/addReducer';
+import filterReducer from '../reducers/filterReducer';
 
 const rootReducer = combineReducers({
-    addSlice,
-    listReducer
+    addReducer,
+    listReducer, 
+    filterReducer
 });
 
 const store = createStore(rootReducer);

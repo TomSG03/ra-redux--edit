@@ -3,7 +3,7 @@
 
 ## [Домашнее задание к лекции «Redux»](https://github.com/TomSG03/ra16-homeworks/tree/master/redux)
 
-- [ ] Redux
+- [x] Редактирование и Фильтрация
 
 ---
 [Спискок задач](https://github.com/TomSG03/ra-homeworks-list)

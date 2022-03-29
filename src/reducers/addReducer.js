@@ -4,7 +4,7 @@ const initialState = {
    price: ''
 };
 
-export default function addSlice(state = initialState, action) {
+export default function addReducer(state = initialState, action) {
    switch (action.type) {
       case 'CHANGE-FIELD':
          const change = { ...action.payload };

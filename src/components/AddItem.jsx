@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 function AddItem() {
-  const storeItems = useSelector((store) => store.addSlice);
+  const storeItems = useSelector((store) => store.addReducer);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
