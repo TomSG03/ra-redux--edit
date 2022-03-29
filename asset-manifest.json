@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/ra-redux-edit/static/css/main.ae0fdff6.chunk.css",
-    "main.js": "/ra-redux-edit/static/js/main.ac60a160.chunk.js",
-    "main.js.map": "/ra-redux-edit/static/js/main.ac60a160.chunk.js.map",
-    "runtime-main.js": "/ra-redux-edit/static/js/runtime-main.242982d6.js",
-    "runtime-main.js.map": "/ra-redux-edit/static/js/runtime-main.242982d6.js.map",
-    "static/js/2.beac53c8.chunk.js": "/ra-redux-edit/static/js/2.beac53c8.chunk.js",
-    "static/js/2.beac53c8.chunk.js.map": "/ra-redux-edit/static/js/2.beac53c8.chunk.js.map",
-    "static/js/3.d578d900.chunk.js": "/ra-redux-edit/static/js/3.d578d900.chunk.js",
-    "static/js/3.d578d900.chunk.js.map": "/ra-redux-edit/static/js/3.d578d900.chunk.js.map",
+    "main.css": "/ra-redux-edit/static/css/main.2d77aa5b.css",
+    "main.js": "/ra-redux-edit/static/js/main.811f355e.js",
+    "static/js/787.04097c43.chunk.js": "/ra-redux-edit/static/js/787.04097c43.chunk.js",
     "index.html": "/ra-redux-edit/index.html",
-    "static/css/main.ae0fdff6.chunk.css.map": "/ra-redux-edit/static/css/main.ae0fdff6.chunk.css.map",
-    "static/js/2.beac53c8.chunk.js.LICENSE.txt": "/ra-redux-edit/static/js/2.beac53c8.chunk.js.LICENSE.txt"
+    "main.2d77aa5b.css.map": "/ra-redux-edit/static/css/main.2d77aa5b.css.map",
+    "main.811f355e.js.map": "/ra-redux-edit/static/js/main.811f355e.js.map",
+    "787.04097c43.chunk.js.map": "/ra-redux-edit/static/js/787.04097c43.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.242982d6.js",
-    "static/js/2.beac53c8.chunk.js",
-    "static/css/main.ae0fdff6.chunk.css",
-    "static/js/main.ac60a160.chunk.js"
+    "static/css/main.2d77aa5b.css",
+    "static/js/main.811f355e.js"
   ]
 }
