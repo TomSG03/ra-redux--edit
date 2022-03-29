@@ -15,7 +15,8 @@ function Filter() {
   };
 
   return (
-    <div className='filter'>
+    <div>
+      <label>Фильтр</label>
       <input
         className='input-filter'
         name="filter"

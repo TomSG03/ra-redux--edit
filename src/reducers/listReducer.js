@@ -40,7 +40,6 @@ export default function listReducer(state = initialState, action) {
         state.filter = state.filter.filter(item => item.id !== idItem)
       }
       return { ...state }
-      // return { ...state, items: newItems }
     case 'UPDATE-ITEM':
       const { id, name, price } = action.payload;
       const edit = state.items.find((e) => e.id === id);

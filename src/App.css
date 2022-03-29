@@ -32,3 +32,12 @@ button {
   margin-right: 53px;
   margin-bottom: 10px;
 }
+
+label {
+  display: block;
+}
+
+form {
+  display: flex;
+  align-items: flex-end;
+}
