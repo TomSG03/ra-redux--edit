@@ -4,9 +4,9 @@ import addReducer from '../reducers/addReducer';
 import filterReducer from '../reducers/filterReducer';
 
 const rootReducer = combineReducers({
-    addReducer,
     listReducer, 
-    filterReducer
+    filterReducer,
+    addReducer,
 });
 
 const store = createStore(rootReducer);

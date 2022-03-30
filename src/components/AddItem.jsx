@@ -16,11 +16,9 @@ function AddItem() {
     if (storeItems.name !== '' && storeItems.price !== '') {
       if (storeItems.id === '') {
         dispatch({ type: 'ADD-ITEM', payload: { name, price } });
-        dispatch({ type: 'CLEAR-FIELD', payload: '' });
       }
       else {
         dispatch({ type: 'UPDATE-ITEM', payload: { id, name, price } });
-        dispatch({ type: 'CLEAR-FIELD', payload: '' });
       }
     }
   };
