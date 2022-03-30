@@ -1,3 +1,11 @@
+import { 
+  ADD_ITEM, 
+  UPDATE_ITEM,
+  CHANGE_FIND_FIELD,
+  CLEAR_FIND_FIELD,
+  REMOVE_ITEM,
+} from '../actions/actionTypes';
+
 import { nanoid } from 'nanoid';
 
 const initialState = {
@@ -13,11 +21,11 @@ const initialState = {
 
 export default function listReducer(state = initialState, action) {
   switch (action.type) {
-    case 'CLEAR-FIND-FIELD':
+    case CLEAR_FIND_FIELD:
       state.filter = [];
       state.enableFilter = false;
       return { ...state };
-    case 'CHANGE-FIND-FIELD':
+    case CHANGE_FIND_FIELD:
       const { value } = action.payload;
       state.enableFilter = value === '' ? false : true;
       if (state.enableFilter) {
@@ -30,17 +38,17 @@ export default function listReducer(state = initialState, action) {
         });
       }
       return { ...state }
-    case 'ADD-ITEM':
+    case ADD_ITEM:
       const newItem = { id: nanoid(), ...action.payload }
       return { ...state, items: [...state.items, newItem] }
-    case 'REMOVE-ITEM':
+    case REMOVE_ITEM:
       const idItem = action.payload.id
       state.items = state.items.filter(item => item.id !== idItem)
       if (state.enableFilter) {
         state.filter = state.filter.filter(item => item.id !== idItem)
       }
       return { ...state }
-    case 'UPDATE-ITEM':
+    case UPDATE_ITEM:
       const { id, name, price } = action.payload;
       const edit = state.items.find((e) => e.id === id);
       edit.name = name;

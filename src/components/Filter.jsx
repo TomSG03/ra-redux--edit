@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
+import { changeFindField, clearFindField } from '../actions/actionCreators'
 
 function Filter() {
   const { filter } = useSelector((store) => store.filterReducer);
@@ -7,11 +8,11 @@ function Filter() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    dispatch({ type: 'CHANGE-FIND-FIELD', payload: { name, value }});
+    dispatch(changeFindField( name, value ));
   };
 
   const handleClear = () => {
-    dispatch({ type: 'CLEAR-FIND-FIELD', payload: '' });
+    dispatch(clearFindField());
   };
 
   return (

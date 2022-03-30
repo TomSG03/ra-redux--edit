@@ -1,30 +1,30 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { addItem, changeField, updateItem, clearField } from '../actions/actionCreators'
 
 function AddItem() {
-  const storeItems = useSelector((store) => store.addReducer);
+  const { id, name, price } = useSelector((store) => store.addReducer);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    dispatch({ type: 'CHANGE-FIELD', payload: { name, value } });
+    dispatch(changeField(name, value));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { id, name, price } = storeItems;
-    if (storeItems.name !== '' && storeItems.price !== '') {
-      if (storeItems.id === '') {
-        dispatch({ type: 'ADD-ITEM', payload: { name, price } });
+    if (name !== '' && price !== '') {
+      if (id === '') {
+        dispatch(addItem(name, price));
       }
       else {
-        dispatch({ type: 'UPDATE-ITEM', payload: { id, name, price } });
+        dispatch(updateItem(id, name, price));
       }
     }
   };
 
   function handleClear() {
-    dispatch({ type: 'CLEAR-FIELD', payload: '' });
+    dispatch(clearField());
   }
 
   return (
@@ -35,7 +35,7 @@ function AddItem() {
           className='input'
           name="name"
           onChange={handleChange}
-          value={storeItems.name}
+          value={name}
         />
       </div>
       <div className='input-price'>
@@ -44,7 +44,7 @@ function AddItem() {
           className='input'
           name="price"
           onChange={handleChange}
-          value={storeItems.price}
+          value={price}
         />
       </div>
       <button onClick={handleSubmit} type="primary">✔</button>
